@@ -21,7 +21,7 @@ const Blogs = () => {
   return (
     <>
  
-    <AppBar/>
+    <AppBar />
     <SecondHeader/>
     {blogs.map((i)=><BlogCard
         key={i.id}

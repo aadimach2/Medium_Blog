@@ -1,6 +1,6 @@
-import {BrowserRouter,Routes,Route } from "react-router-dom"
+import {BrowserRouter,Routes,Route,Navigate } from "react-router-dom"
 import { Signin } from "./pages/Signin"
-import { Signup } from "./pages/signup"
+import { Signup } from "./pages/Signup"
 import  Blogs from "./pages/Blogs"
 import Blog from "./pages/Blog"
 import Publish from "./pages/Publish"
@@ -13,7 +13,8 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/" element ={<Navigate to="/signup" replace/>}/>
+        <Route path="/signup" element={<Signup/>}/>  
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/blogs"  element={<Blogs/>}/>
         <Route path="/blog/:id" element={<Blog/>}/>

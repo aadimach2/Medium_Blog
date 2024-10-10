@@ -7,7 +7,7 @@ import { useBlogId } from "../hooks";
 export default function Blog() {
 
     const  {id}=useParams();
-    const {loading,blog}=useBlogId({ id });
+    const {loading,blog}=useBlogId({ id:id as string });
 
 if(loading){
    return <div>
@@ -22,7 +22,7 @@ if(loading){
 if (!blog) {
     return <div>Blog post not found</div>;
   }
-  console.log(blog);
+
 
 
   return (
